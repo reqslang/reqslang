@@ -1,0 +1,9 @@
+﻿{
+  "name": "reqs-lang.examples",
+  "version": "0.0.0",
+  "description": "ReqsLang.Examples",
+  "main": "app.js",
+  "author": {
+    "name": "Bugolka"
+  }
+}

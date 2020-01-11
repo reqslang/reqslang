@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "(?!\\.)(\\d+(\\.\\d+)+)([-.][A-Z]+)?(?![\\d.])$"
+    },
+    "itemGroup": {
+      "type": "object",
+      "properties": {
+        "templates": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "filePath": {
+                  "type": "string",
+                  "format": "uri-reference"
+                }
+              },
+              "required": [ "filePath" ]
+            }
+          ]
+        }
+      },
+      "requirements": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "type": "string",
+                "format": "uri-reference"
+              }
+            },
+            "required": [ "filePath" ]
+          }
+        ]
+      },
+      "required": [ "templates", "requirements" ]
+    }
+  },
+  "required": [ "version", "itemGroup"]
+}

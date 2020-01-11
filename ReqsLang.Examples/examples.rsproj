@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "itemGroup": {
+    "templates": [
+      { "filePath": "templates/ac.rst" },
+      { "filePath": "templates/base.rst" },
+      { "filePath": "templates/state.rst" }
+    ],
+    "requirements": [
+      { "filePath": "requirements/acSample.rs" },
+      { "filePath": "requirements/variable.rs" }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "reqslang",
+  "version": "0.0.1",
+  "description": "ReqsLang - Requirements Specification Language",
+  "main": "app.js",
+  "author": {
+    "name": "Bugolka"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^6.10.2",
+    "commander": "^2.20.3",
+    "commonmark": "^0.28.1",
+    "jsonpath": "^1.0.2",
+    "knex": "^0.19.5",
+    "log4js": "^3.0.6",
+    "node-dependency-injection": "^2.4.5",
+    "rxjs": "^6.5.4",
+    "rxjs-compat": "^6.5.4",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.2"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha --recursive --exit",
+    "debug": "node app.js ../ReqsLang.Examples/examples.rsproj"
+  }
+}

@@ -1,0 +1,105 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>ReqsLang</Name>
+    <RootNamespace>RSLang</RootNamespace>
+    <ScriptArguments>../ReqsLang.Examples/examples.rsproj</ScriptArguments>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>504d00d9-9e7b-406d-8661-95db5b7e0cbd</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <StartWebBrowser>False</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.js" />
+    <Compile Include="common\ofn.js" />
+    <Compile Include="common\template.js" />
+    <Compile Include="common\templatecache.js" />
+    <Compile Include="container.js" />
+    <Compile Include="loader\baseloader.js" />
+    <Compile Include="loader\mainloader.js" />
+    <Compile Include="loader\project\firstprojectloader.js" />
+    <Compile Include="loader\project\projectloader.js" />
+    <Compile Include="loader\requirement\requirementloader.js" />
+    <Compile Include="loader\template\templateloader.js" />
+    <Compile Include="service\configservice.js" />
+    <Compile Include="service\requirementdaoservice.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="service\templatedaoservice.js" />
+    <Compile Include="service\databaseservice.js" />
+    <Compile Include="service\filejsonservice.js" />
+    <Compile Include="service\filemarkservice.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="service\schemavalidationservice.js" />
+    <Compile Include="service\fileservice.js" />
+    <Compile Include="service\jsonpathservice.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="service\jsonservice.js" />
+    <Compile Include="service\markservice.js" />
+    <Compile Include="service\pathservice.js" />
+    <Compile Include="service\templatebuilderservice.js" />
+    <Compile Include="shared.js" />
+    <Compile Include="test\common\ofn.test.js">
+      <TestFramework>mocha</TestFramework>
+    </Compile>
+    <Compile Include="test\common\template.test.js">
+      <SubType>Code</SubType>
+      <TestFramework>mocha</TestFramework>
+    </Compile>
+    <Compile Include="test\common\templatecache.test.js">
+      <TestFramework>mocha</TestFramework>
+    </Compile>
+    <Compile Include="test\service\databaseservice.test.js">
+      <TestFramework>mocha</TestFramework>
+    </Compile>
+    <Compile Include="test\service\templatebuilderservice.test.js">
+      <TestFramework>mocha</TestFramework>
+    </Compile>
+    <Content Include="azure-pipelines.yml" />
+    <Content Include="config\config.json" />
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="schema\0.0.1\projectschema.json" />
+    <Content Include="schema\0.0.1\templateschema.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="common\" />
+    <Folder Include="config\" />
+    <Folder Include="loader\" />
+    <Folder Include="loader\project\" />
+    <Folder Include="loader\requirement\" />
+    <Folder Include="loader\template\" />
+    <Folder Include="schema\" />
+    <Folder Include="schema\0.0.1\" />
+    <Folder Include="service\" />
+    <Folder Include="test\" />
+    <Folder Include="test\common\" />
+    <Folder Include="test\service\" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+</Project>
