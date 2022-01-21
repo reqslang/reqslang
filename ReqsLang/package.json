@@ -13,7 +13,7 @@
     "commonmark": "^0.28.1",
     "jsonpath": "^1.0.2",
     "knex": "^0.19.5",
-    "log4js": "^3.0.6",
+    "log4js": "^6.4.0",
     "node-dependency-injection": "^2.4.5",
     "rxjs": "^6.5.4",
     "rxjs-compat": "^6.5.4",
